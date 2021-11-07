@@ -7,10 +7,6 @@
     "start": "NODE_ENV=production node portfolio",
     "dev": "nodemon portfolio"
   },
-  "repository": {
-    "type": "git",
-    "url": "new-portfolio"
-  },
   "author": "Chigozie Francis",
   "license": "ISC",
   "dependencies": {
