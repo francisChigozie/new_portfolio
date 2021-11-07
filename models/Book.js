@@ -5,18 +5,18 @@ var Schema = mongoose.Schema;
 var authorSchema = new Schema({
     name: {
         type: String,
-        required: [false, 'Please add a name']
+        required: [true, 'Please add a name']
     },
     affiliation: {
         type: String,
-        required: [false, 'Please add affiliation name']
+        required: [true, 'Please add affiliation name']
     }
 });
 
 var bookSchema = new Schema({
     title: {type: String, 
-        required: [false, 'Please add the year of publication'],
-         unique: [false, 'Sorry ! This title is already published ']},
+        required: [true, 'Please add the year of publication'],
+         unique: [true, 'Sorry ! This title is already published ']},
     year: {
         type: Number,
         required: [true, 'Please add year']
