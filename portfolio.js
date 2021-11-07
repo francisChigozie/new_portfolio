@@ -62,7 +62,6 @@ app.use(limiter)
 app.use(hpp())
 
 app.use('/', router)
-app.use('/api/v1/', router)
 //app.use('/api/v1/contacts'contacts)
 app.use(errorHadler)    
 

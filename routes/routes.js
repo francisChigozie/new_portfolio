@@ -34,16 +34,11 @@ router.get('/contact', function (req, res) {
 //@route  POST /api/v1/contact
 //@access  Public
 
-router.post('/api/v1/contact', asyncHandler(async(req, res, next) => {
+router.post('/contact', asyncHandler(async(req, res, next) => {
        //const {email} = req.body;
         // sendmail(email)
 
           const newContact = await Contact.create( req.body)
-
-     res.status(200).json({
-        success: true,
-        data: newContact
-    })
 
     newContact.save( (err) => {
         if (err) {
@@ -59,7 +54,7 @@ router.post('/api/v1/contact', asyncHandler(async(req, res, next) => {
 //@route  GET /api/v1/contacts/:id
 //@access  Private/admin
 
-router.get('/api/v1/contact/:id', asyncHandler(async(req, res, next) => {
+router.get('/contact/:id', asyncHandler(async(req, res, next) => {
      const newContact = await Contact.findById(req.params.id)
 
      res.status(200).json({
@@ -219,16 +214,11 @@ router.get('/book', function (req, res) {
 //@route  POST /api/v1/book
 //@access  Public
 
-router.post('/api/v1/book', asyncHandler(async(req, res, next) => {
+router.post('/createbook', asyncHandler(async(req, res, next) => {
 
          const newBook = await Book.create(req.body)
 
-     res.status(200).json({
-        success: true,
-        data: newBook
-    })
-
-    newContact.save( (err) => {
+    newBook.save( (err) => {
         if (err) {
             res.type('html').status(500);
             res.send('Error:', err);
@@ -236,6 +226,7 @@ router.post('/api/v1/book', asyncHandler(async(req, res, next) => {
              res.render('createdbook', {book: newBook});
         }
     });
+
 }))
 
 //GET ALL BOOKS
