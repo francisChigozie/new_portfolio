@@ -33,7 +33,7 @@ const PORT = process.env.PORT || 3000
 app.set('view engine', 'ejs');
 
 app.use(cors({
-    origin: "http://localhost:3000"//"https://digital-space.herokuapp.com" //or your netlify domain
+    origin: "https://cyricusdigitalspace.herokuapp.com/" //or your netlify domain
 }))
 
 app.use(express.urlencoded({extended: true}))
