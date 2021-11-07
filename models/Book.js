@@ -5,11 +5,11 @@ var Schema = mongoose.Schema;
 var authorSchema = new Schema({
     name: {
         type: String,
-        required: [true, 'Please add a name']
+        required: [false, 'Please add a name']
     },
     affiliation: {
         type: String,
-        required: [true, 'Please add affiliation name']
+        required: [false, 'Please add affiliation name']
     }
 });
 
