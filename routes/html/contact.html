@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Contact</title>
+</head>
+<body>
+    <a href="/"><h1 class="contact-form">Enter Your Contact Details</h1></a>
+    <form action="./contact" method="POST" class="contact-form">
+        <label for="name" class="form"><input
+               name="name" type="text" 
+               placeholder="enter you name.."
+               required></label>
+        <p>
+            <label for="subject" class="form"><input
+                   name="subject" type="text" 
+                   placeholder="enter the subject.."
+                   required></label>
+        </p>
+        <label for="email" class="form"><input 
+               name="email" type="email" 
+               placeholder="enter your email.."
+               required></label>
+        <p>
+            <label for="text" class="form"><textarea name="text" id="text"
+                   cols="50" rows="20" placeholder="enter your text here"
+                   required></textarea></label>
+        </p>
+        <input type="submit" value="Submit" class="submit">
+    </form>
+</body>
+
+</html>

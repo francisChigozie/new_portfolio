@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.0.8/skeleton.css">
+    <title>Book List</title>
+    <style>
+       h1{
+        text-align: center;
+        color: green;
+    }
+    .success,
+    .error {
+        color: white;
+        padding: 5px;
+        margin: 5px 0 15px 0;
+    }
+    .success {
+        background-color: green;
+    }
+
+    .error {
+        background-color: red;
+    }
+    .label{
+        color: rgba(25, 230, 42, 0.767);
+        font-size: large;
+    }
+    .table{
+        color: rgba(3, 194, 3, 0.8);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
+                <h1>Add Book</h1>
+                <form id="book-form">
+                    <div>
+                        <label for="title" class="label">Title</label>
+                        <input type="text" class="u-full-width" id="title" placeholder="enter the Tilte..">
+                    </div>
+                    <div>
+                        <label for="author" class="label">Author</label>
+                        <input type="text" class="u-full-width" id="author" placeholder="enter the Author..">
+                    </div>
+                    <div>
+                        <label for="isbn" class="label">ISBN</label>
+                        <input type="text" class="u-full-width" id="isbn" placeholder="enter the ISBN">
+                    </div>
+                    <div>
+                        <input type="submit" class="u-full-width" value="Submit">
+                    </div>
+                </form>
+                <table class="u-full-widh">
+                    <thead>
+                        <tr>
+                            <th class="table">Title</th>
+                            <th class="table">Author</th>
+                            <th class="table">ISBN</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="book-list"></tbody>
+                </table>
+                </div>
+                
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+                
+                <script src="../js/bklist.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/guess.js"></script>
+</body>
+
+</html>

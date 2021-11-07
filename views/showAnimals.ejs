@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Animals</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="animal-form">
+    Hello, <strong> <%= name %>, </strong> <br><br> nice to meet you.
+    <br><br>
+    <h3>Here are the animals you like :</h3>
+    <p>
+        <br><br>
+        <ol>
+            <% animals.forEach((animal) =>{ %>
+             <li> <strong> <%= animal %> </strong> </li><br>
+           <% }); %>
+        </ol>
+        <br><br>
+        <a href="./animal">Back to form </a>
+    </p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search result of Books</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="animal-form">
+    <h3>Here are the results of your search:</h3>
+    <ul>
+        <% books.forEach((book) => { %>
+         <li>
+             <i><%= book.title %></i>.
+
+         <% book.authors.forEach((author) => { %>
+            <%= author.name %>,<br>
+
+        <% }); %>
+
+        <%= book.year %>.
+        </li><br>
+        <% }); %>
+    </ul>
+         <a href="./animal">Back to form</a>
+</body>
+</html>

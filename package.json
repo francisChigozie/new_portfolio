@@ -1,0 +1,35 @@
+{
+  "name": "newportfolio",
+  "version": "1.0.0",
+  "description": "disply of many projects",
+  "main": "portfolio.js",
+  "scripts": {
+    "start": "NODE_ENV=production node portfolio",
+    "dev": "nodemon portfolio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "new-portfolio"
+  },
+  "author": "Chigozie Francis",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.1.0",
+    "express-rate-limit": "^5.5.1",
+    "helmet": "^4.6.0",
+    "hpp": "^0.2.3",
+    "mongoose": "^6.0.12",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.7.0",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "nodemon": "^2.0.14"
+  }
+}
