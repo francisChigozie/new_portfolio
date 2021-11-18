@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+//const hbs = require('express-handlebars')
 const dotenv = require('dotenv')
 const connectToDatabase = require('./models/index');
 const path = require('path')
@@ -12,8 +13,10 @@ const helmet = require('helmet')
 const xss = require('xss-clean')
 const rateLimit = require('express-rate-limit')
 const hpp = require('hpp')
+const sendmail = require('./routes/sendmail')
 //const books = require('./routes/books');
 //const contacts = require('./routes/contacts');
+//const hotelcontact = require('./routes/hotelcontact');
 const errorHadler = require('./middleware/error');
 
 // Load env vars
@@ -33,7 +36,7 @@ const PORT = process.env.PORT || 3000
 app.set('view engine', 'ejs');
 
 app.use(cors({
-    origin: "https://cyricusdigitalspace.herokuapp.com/" //or your netlify domain
+    origin: "http://localhost:3000, https://frankfurtfintek.netlify.app/" //or your netlify domain
 }))
 
 app.use(express.urlencoded({extended: true}))
@@ -41,6 +44,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static(path.join(__dirname, `public`)))
 //app.use(express.static(process.cwd() + 'public'))
 app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json());
 
 //Sanitize Data
 app.use(mongoSaitize())
@@ -63,6 +67,7 @@ app.use(hpp())
 
 app.use('/', router)
 //app.use('/api/v1/contacts'contacts)
+//app.use('/api/v1/hotelcontact', hotelcontact)
 app.use(errorHadler)    
 
 //CONNECTINT TO DATA BASE

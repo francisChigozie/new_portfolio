@@ -13,11 +13,14 @@
     <h3>Here are the animals you like :</h3>
     <p>
         <br><br>
-        <ol>
-            <% animals.forEach((animal) =>{ %>
-             <li> <strong> <%= animal %> </strong> </li><br>
-           <% }); %>
-        </ol>
+        <ul>
+            <% animals.forEach((animal)=>{ %>
+                <li>
+                    <%= animal %>
+                </li>
+                <% }); %>
+        </ul>
+        
         <br><br>
         <a href="./animal">Back to form </a>
     </p>

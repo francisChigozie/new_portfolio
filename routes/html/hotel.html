@@ -13,6 +13,18 @@
         text-align: center;
         color: green;
     }
+
+    .container {
+    margin: auto;
+    max-width: 1100px;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+
+    span{
+        margin-left: 15px;
+    }
     .success,
     .error {
         color: white;
@@ -29,10 +41,16 @@
     .label{
         color: rgba(25, 230, 42, 0.767);
         font-size: large;
+        
     }
     .table{
         color: rgba(3, 194, 3, 0.8);
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .labels{
+        background-color: rgb(110, 81, 27);
+        color: tomato;
+        
     }
     </style>
 </head>
@@ -40,9 +58,9 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
-                <h1>Add Book</h1>
-                <form id="book-form">
+             <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
+                  <h1>Add Book</h1>
+                  <form id="book-form">
                     <div>
                         <label for="title" class="label">Title</label>
                         <input type="text" class="u-full-width" id="title" placeholder="enter the Tilte..">
@@ -58,38 +76,27 @@
                     <div>
                         <input type="submit" class="u-full-width" value="Submit">
                     </div>
-                </form>
-                <table class="u-full-widh">
-                    <thead>
-                        <tr>
-                            <th class="table">Title</th>
-                            <th class="table">Author</th>
-                            <th class="table">ISBN</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody id="book-list"></tbody>
-                </table>
-                </div>
+                 </form>
+                 <table class="u-full-widh labels">
+                     <thead>
+                         <tr><span>
+                             <th class="table">Title</th>
+                             <th class="table">Author</th>
+                             <th class="table">ISBN</th></span>
+                             <th>Remove</th>
+                         </tr>
+                     </thead>
+                     <tbody id="book-list"></tbody>
+                 </table>
+             </div>
                 
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
                 
                 <script src="../js/bklist.js"></script>
-            </div>
-        </div>
-    </div>
+           </div>
+     </div>
+ </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-
-    <script src="../js/guess.js"></script>
 </body>
 
 </html>

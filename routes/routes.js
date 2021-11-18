@@ -3,6 +3,8 @@ var router = express.Router()
 const path = require('path')
 const sendmail = require('./sendmail.js')
 const Contact = require('../models/Contact')
+const Hotelcontact = require('../models/HotelContact')
+const Frankfurtcontact = require('../models/FrankfurtContact')
 const Book = require('../models/Book');
 const ErrorResponse = require('../utils/errorResponse')
 const asyncHandler = require('../middleware/async')
@@ -190,7 +192,7 @@ router.get('/animal', function (req, res) {
 }); 
 
 //form.html
-router.get('/formanimal', function (req, res) {
+router.get('/formAnimal', function (req, res) {
       res.sendFile(path.join(__dirname, '/html/form.html'))
 }); 
 
@@ -199,9 +201,14 @@ router.get('/animal', function (req, res) {
       res.sendFile(path.join(__dirname, '/html/list.html'))
 }); 
 router.post('/handleForm', (req, res) => {
-    var name = req.body.username;
-    var animals = [].concat(req.body.animal);
-res.render('showAnimals', {name: name, animals:animals});
+
+     var name = req.body.username;
+     var animals = [].concat(req.body.sapian);
+   console.log(animals)
+     res.render('showAnimals', {name: name, animals:animals});
+    
+    
+
     })
 
 ////////////////////////////////////////////
@@ -345,17 +352,70 @@ router.get('/guess', function (req, res) {
       res.sendFile(path.join(__dirname, '/html/guess.html'))
 }); 
 
-// New Tasls
-router.get('/booklist', function (req, res) {
-      res.sendFile(path.join(__dirname, '/html/booklist.html'))
+// Hotel Lounge
+router.get('/hotel', function (req, res) {
+      res.sendFile(path.join(__dirname, '/hotel/hotel.html'))
 }); 
 
-
-//Github Finder
-router.get('/github', function (req, res) {
-      res.sendFile(path.join(__dirname, '/html/github.html'))
+router.get('/hotelabout', function (req, res) {
+      res.sendFile(path.join(__dirname, '/hotel/about.html'))
 }); 
 
+router.get('/hotelcontact', async function(req, res) {
+      res.sendFile(path.join(__dirname, '/hotel/contact.html'))
+
+      const hotelcontact = await  Hotelcontact.find();
+
+      res.status(201).json({
+          suceess: true,
+          data: hotelcontact
+      })
+}); 
+
+ router.post('/hotelcontact', (asyncHandler(async (req, res, next) => {
+    const {email} = req.body;
+         //sendmail(email)
+    try{
+       const hotelcontact = await Hotelcontact.create(req.body)
+
+     hotelcontact.save(() => {
+
+            res.render('hotelform', {data: hotelcontact,
+              success: true});
+        
+    });
+
+    }catch(err){
+        error.message(err)
+    }
+
+})))
+
+//Frankfurt Ledger
+router.post('/frankfurtcontact', (asyncHandler(async (req, res, next) => {
+    const {email} = req.body;
+         //sendmail(email)
+    try{
+       const frankfurtcontact = await Frankfurtcontact.create(req.body)
+
+     frankfurtcontact.save(() => {
+
+            res.render('frankfurt', {data: frankfurtcontact,
+              success: true});
+        
+    });
+
+    }catch(err){
+        error.message(err)
+    }
+
+})))
+
+
+//Hambuger Menu
+router.get('/hambuger', function (req, res) {
+      res.sendFile(path.join(__dirname, '/html/hambuger.html'))
+}); 
 //404 PAGE
 router.get(/*default*/ (req, res) => {
     res.status(404).sendFile(__dirname + '/404.html')
