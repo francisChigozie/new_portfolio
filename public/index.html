@@ -5,113 +5,120 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Home</title>
 
 </head>
 
 <body>
-    <header class="box-1">
+    <header id="header" class="navbar top">
 
         <nav>
             <div>
                 <ul>
-                    <li class="box-2"><a href="./">Home</a></li>
-                    <li class="box-2"><a href="./about">About</a></li>
-                    <li class="box-2"><a href="./project">Project</a></li>
-                    <li class="box-2"><a href="./resume">Resume</a></li>
-                    <li class="box-2"><a href="https://github.com/francisChigozie" target="_blank">Blog</a></li>
-                    <li class="box-2"><a href="./contact">Contact</a></li>
+                    <li><a class="current" href="./">Home</a></li>
+                    <li><a href="./about">About</a></li>
+                   
+                    <li><a href="./resume">Resume</a></li>
+                    <li><a href="https://github.com/francisChigozie" target="_blank">Blog</a></li>
+                    <li><a href="./contact">Contact</a></li>
                 </ul>
             </div>
-
-        </nav>
+        </nav>   
     </header>
+
     <img src="../image/chigo_berlin.jpg" alt="servers as logo" width="300" class="logo">
-    <main>
-        <h1>Front End </h1><br><br>
-        <div class="container-one">
-            <div class="project">
-                <a href="/hotel" class="circle">
-                    <h3><br> Hotel<br> Lounge</h3>
-                </a>
-            </div>
-            <div class="project">
-                <a href="https://frankfurtfintek.netlify.app/" class="circle">
-                    <h3><br> Frankfurt<br> Ledger</h3>
-                </a>
-            </div>
-            <div class="project">
-                <a href="/guess" class="circle">
-                    <h3><br> Number<br> Guesser</h3>
-                </a>
-            </div>
-        </div>
-        <br><br>
-        <div class="container-one">
-            <div class="project">                                <!-- https://websitecotentful.netlify.app-->
-                <a href="/hambuger" class="circle">
-                    <h3> <br> Hambuger<br><br> Menu</h3>
-                </a>
-            </div>
-            <div class="project">
-                <a href="https://display-portfolio.netlify.app" class="circle">
-                    <h3><br> Know<br> Your IP</h3>
-                </a>
-            </div>
-            <div class="project">
-                <a href="/calculate" class="circle">
-                    <h3><br> Loan<br> Calculator</h3>
-                </a>
-            </div>
-
-        </div>
-        <br><br>
-        <h1>Back End</h1><br><br>
-
-        <div class="project">
-            <a href="https://websitecotentful.netlify.app/create" class="circle">
-                <h3><br> CRUD<br> Mongo Data Base</h3>
-            </a>
-        </div>
-        <div class="project">
-            <a href="https://websitecotentful.netlify.app/tocook" class="circle">
-                <h3><br> CRUD <br> Postgres Data Base</h3>
-            </a>
-        </div>
-        <div class="project">
-            <a href="https://websitecotentful.netlify.app/signup" class="circle">
-                <h3><br> UX<br> Signup Form</h3>
-            </a>
-        </div>
-        </div>
-        <div class="container-two">
-            <div class="back-two">
-                <div class="project">
-                    <a href="./animal" class="circle">
-                        <h3><br> Book List <br>&<br> Animals I Like</h3>
-                    </a>
+    
+   <div id="main" class="container">
+       <div class="row">
+            <main>
+                <h1>Front End </h1><br><br>
+                <div>
+                    <div class="project  bta">
+                        <a href="/hotel"><br>
+                            <h3><br> Hotel<br> Lounge</h3>
+                        </a>
+                    </div>
+                    <div class="project bta">
+                        <a href="https://frankfurtfintek.netlify.app/"><br>
+                            <h3><br> Frankfurt<br> Ledger</h3>
+                        </a>
+                    </div>
+                    <div class="project bta">
+                        <a href="/guess"><br>
+                            <h3><br> Number<br> Guesser</h3>
+                        </a>
+                    </div>
                 </div>
-                <div class="project">
-                    <a href=" https://groupproject-minitwitter.netlify.app" class="circle">
-                        <h3><br>Mini<br> Twitter</h3>
-                    </a>
+                <br><br>
+                <div>
+                    <div class="project bta">
+                        <!-- https://websitecotentful.netlify.app-->
+                        <a href="/hambuger"><br>
+                            <h3> <br> Hambuger<br><br> Menu</h3>
+                        </a>
+                    </div>
+                    <div class="project bta">
+                        <a href="/knowledge"><br>
+                            <h3><br> knowledge<br> Resume</h3>
+                        </a>
+                    </div>
+                    <div class="project bta">
+                        <a href="/calculate"><br>
+                            <h3><br> Loan<br> Calculator</h3>
+                        </a>
+                    </div>
+            
                 </div>
-            </div>
-    </main>
-    <footer class="container-three">
-        <div class="foot">
-            <a href="#">
-                <img src="./image/facebook.png" alt="Faceboke" width="20">
-            </a>
-            <a href="#">
-                <img src="./image/twitter-image.png" alt="twitter" width="20">
-            </a>
-            <a href="
-            ">
-                <img src="./image/instagram.jpg" alt="Instagram" width="20">
-            </a>
-        </div>
+                <br><br>
+                <h1>Back End</h1><br><br>
+            
+               <section id="back-end">
+                    <div>
+                        <div class="project bta">
+                            <a href="https://websitecotentful.netlify.app/create"><br>
+                                <h3><br> CRUD<br> Mongo Data Base</h3>
+                            </a>
+                        </div>
+                        <div class="project bta">
+                            <a href="https://websitecotentful.netlify.app/tocook"><br>
+                                <h3><br> CRUD <br> Postgres Data Base</h3>
+                            </a>
+                        </div>
+                        <div class="project bta">
+                            <a href="https://websitecotentful.netlify.app/signup"><br>
+                                <h3><br> UX<br> Signup Form</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <div class="project bta">
+                                <a href="./animal"><br>
+                                    <h3><br> Book <br> List</h3>
+                                </a>
+                            </div>
+                            <div class="project bta">
+                                <a href=" https://groupproject-minitwitter.netlify.app"><br>
+                                    <h3><br>Mini<br> Twitter</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+               </section>
+            </main>
+           <br><br>
+       </div>
+   </div>
+    <footer class="footer bg-dark">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div><br><br>
+        <p>Copyright &copy; 2021 - Chigozie Francis</p>
     </footer>
     <script src="./js/main.js"></script>
 

@@ -416,6 +416,11 @@ router.post('/frankfurtcontact', (asyncHandler(async (req, res, next) => {
 router.get('/hambuger', function (req, res) {
       res.sendFile(path.join(__dirname, '/html/hambuger.html'))
 }); 
+
+//Knowledger Resume
+router.get('/knowledge', function (req, res) {
+      res.sendFile(path.join(__dirname, '/html/knowledge.html'))
+}); 
 //404 PAGE
 router.get(/*default*/ (req, res) => {
     res.status(404).sendFile(__dirname + '/404.html')

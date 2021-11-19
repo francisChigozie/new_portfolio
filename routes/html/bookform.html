@@ -24,15 +24,19 @@
                 <h1 class="book-form">Create A Book list</h1>
                 <form action="./createbook" method="POST" class="animal-form">
                 
-                   <label for="title" >Title : </label><input name="title"><br><br>
+                   <label for="title" >Title : </label><input name="title"
+                   required><br><br>
 
                     <p>
-                       <label for="year" >Year : </label><input name="year">
+                       <label for="year" >Year : </label><input name="year"
+                       required>
                     </p><br><br>
                 
                      <label for="author">Author #1: </label> <br>
-                     <label for="name">Name : </label> <input name="authors[0][name]"><br><br>
-                     <label for="affiliation" class="affilia">Affiliation : </label> <input name="authors[0][affiliation]">
+                     <label for="name">Name : </label> <input name="authors[0][name]"
+                     required><br><br>
+                     <label for="affiliation" class="affilia">Affiliation : </label> <input name="authors[0][affiliation]"
+                     required>
                     <p>
                 
                         <label for="author2">Author #2: </label> <br>
