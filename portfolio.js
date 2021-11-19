@@ -36,12 +36,12 @@ const PORT = process.env.PORT || 3000
 app.set('view engine', 'ejs');
 
 app.use(cors({
-    origin: "http://localhot:3000"        //"https://frankfurtfintek.netlify.app/" //or your netlify domain
+    origin: "https://frankfurtfintek.netlify.app/" //or your netlify domain
 }))
 
 app.use(express.urlencoded({extended: true}))
-//app.use(express.static('public'))
-app.use(express.static(path.join(__dirname, `public`)))
+//app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname + `/public`)))
 //app.use(express.static(process.cwd() + 'public'))
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json());
