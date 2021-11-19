@@ -299,4 +299,9 @@ img {
      max-width: 500px;
      margin-left: 0px;
  }
+
+ #feedback-form {
+max-width: 600px;
+margin-left: 60px;
+}
 }
