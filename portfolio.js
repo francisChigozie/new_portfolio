@@ -36,7 +36,7 @@ const PORT = process.env.PORT || 3000
 app.set('view engine', 'ejs');
 
 app.use(cors({
-    origin: "https://frankfurtfintek.netlify.app/" //or your netlify domain
+    origin: "https://digitalexhibition.herokuapp.com/" //or your netlify domain
 }))
 
 app.use(express.urlencoded({extended: true}))

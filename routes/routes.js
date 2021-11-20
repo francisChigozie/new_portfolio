@@ -410,7 +410,9 @@ router.post('/frankfurtcontact', (asyncHandler(async (req, res, next) => {
     }
 
 })))
-
+router.get('/frankfurt', function (req, res) {
+      res.sendFile(path.join(__dirname, '/frankfurt/index.html'))
+}); 
 
 //Hambuger Menu
 router.get('/hambuger', function (req, res) {
