@@ -410,13 +410,29 @@ router.post('/frankfurtcontact', (asyncHandler(async (req, res, next) => {
     }
 
 })))
+
 router.get('/frankfurt', function (req, res) {
       res.sendFile(path.join(__dirname, '/frankfurt/index.html'))
 }); 
 
+router.get('/frankfurtblog', function (req, res) {
+      res.sendFile(path.join(__dirname, '/frankfurt/blog.html'))
+}); 
+
+router.get('/frankfurtpost1', function (req, res) {
+      res.sendFile(path.join(__dirname, '/frankfurt/post1.html'))
+}); 
+
+router.get('/frankfurtpost2', function (req, res) {
+      res.sendFile(path.join(__dirname, '/frankfurt/post2.html'))
+}); 
 //Hambuger Menu
 router.get('/hambuger', function (req, res) {
       res.sendFile(path.join(__dirname, '/html/hambuger.html'))
+}); 
+
+router.get('/frankfurtpost3', function (req, res) {
+      res.sendFile(path.join(__dirname, '/frankfurt/post3.html'))
 }); 
 
 //Knowledger Resume
