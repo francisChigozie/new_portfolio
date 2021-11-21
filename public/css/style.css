@@ -187,6 +187,21 @@ margin-left: 170px;
     border-color: #f7c08a;
 }
 
+ #contact-form button {
+        color:black;
+        text-decoration: none;
+        padding: 15px;
+        border: 1px solid #333;
+        border-radius: 10px;
+        opacity: 0.8;
+    }
+     
+    #contact-form button:hover {
+        color: #fff;
+        cursor: pointer;
+        background-color:goldenrod;
+    }
+
 /* Contact Form Feedback */
 #feedback-form {
 max-width: 920px;
