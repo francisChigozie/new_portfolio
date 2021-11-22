@@ -1,17 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=open+Sans:wght@300;400&display=swap');
+@import url('https://font.googleapis.com/css2?family=open+sans:wght@300;400&display=swap');
 
 :root {
     --primary-color: #333;
     --secondary-color: goldenrod;
+    --animate-speed: 2s;
     --max-width: 920px;
 }
 
 body{
-    font: normal 1rem/1.5 'Arial', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    margin: 0;
     background: var(--primary-color);
     color: #fff;
     overflow-x: hidden;
-    padding-bottom: 50px;
+    padding: 0px;
 }
 
 * {
@@ -41,6 +44,7 @@ body{
     padding: 10px 20px;
     text-decoration: none;
     margin: 0 ;
+    transition: all 0.2s ease-in;
 }
 
 .navbar a:hover {
@@ -66,14 +70,17 @@ body{
     margin-top: 1rem;
 }
 
-.container {
+.page{
     margin: 0 auto;
     text-align: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 4rem;
+    height: 100vh;
+    flex-direction: column;
 }
 
-#main .project {
+.main-circle .project {
   border: 1px solid ivory;
             width: 200px;
             height: 200px;
@@ -82,11 +89,21 @@ body{
             align-items: center;
 }
 
-    h3:hover, h4:hover{
+h3, h4 {
+    border: none;
+    margin-top: 1rem;
+    transition: all 0.3s ease-in;
+}
+
+.btn {
+    color: #fff;
+    transition: all 0.3s ease-in;
+}
+    h3:hover, h4:hover, .btn:hover{
             color: goldenrod;
         }
 
- #main .project a {
+ .main-circle .project a {
     color:rgba(219, 168, 40, 0.418);
      text-decoration: none;
     }
@@ -106,6 +123,7 @@ body{
         border: 1px solid gray;
         border-radius: 20px;
         opacity: 0.8;
+        transition: all 0.3s ease-in;
     }
      
     #about .about a:hover {
@@ -147,6 +165,7 @@ body{
     text-decoration: none;
     padding: 20px;
     border-radius: 5px;
+    transition: all 0.3s ease-in;
 }
 
  #resume a:hover {
@@ -194,6 +213,7 @@ margin-left: 170px;
         border: 1px solid #333;
         border-radius: 10px;
         opacity: 0.8;
+        transition: all 0.3s ease-in;
     }
      
     #contact-form button:hover {
@@ -226,6 +246,7 @@ margin-left: 170px;
         border: 1px solid gray;
         border-radius: 20px;
         opacity: 0.8;
+        transition: all 0.3s ease-in;
 }
 
 #feedback-form .feedback a:hover {
@@ -256,6 +277,7 @@ margin-left: 170px;
 
 .footer a {
     color: #fff;
+    transition: all 0.3s ease-in;
 }
 
 .footer a:hover {

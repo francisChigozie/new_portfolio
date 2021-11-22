@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/lightbox.min.css">
     <title>Home</title>
 
 </head>
@@ -25,89 +26,103 @@
                     <li><a href="./contact">Contact</a></li>
                 </ul>
             </div>
-        </nav>   
+        </nav> 
+        
     </header>
 
-    <img src="../image/chigo_berlin.jpg" alt="servers as logo" width="300" class="logo">
+     <img src="../image/chigo_berlin.jpg" alt="servers as logo" width="300" class="logo">
     
-   <div id="main" class="container">
-       <div class="row">
-            <main>
-                <h1>Front End </h1><br><br>
-                <div>
-                    <div class="project  bta">
-                        <a href="/hotel"><br>
-                            <h3><br> Hotel<br> Lounge</h3>
+   <!--  Page 1 -->
+   <section id="page-1" class="page">
+            
+                  <div class="container">
+                    <h1>Front End</h1><br>
+                            <div class="main-circle">
+                                <div class="project  bta">
+                                    <a href="/hotel"><br>
+                                        <h3><br> Hotel<br> Lounge</h3>
+                                    </a>
+                                </div>
+                            
+                                <div class="project bta">
+                                    <a href="/frankfurt"><br>
+                                        <h3><br> Frankfurt<br> Ledger</h3>
+                                    </a>
+                                </div>
+                            
+                                <div class="project bta">
+                                    <a href="/guess"><br>
+                                        <h3><br> Number<br> Guesser</h3>
+                                    </a>
+                                </div>
+                    
+                                <div class="project bta">
+                                    <!-- https://websitecotentful.netlify.app-->
+                                    <a href="/hambuger"><br>
+                                        <h3> <br> Hambuger<br><br> Menu</h3>
+                                   </a>
+                                </div>
+                    
+                                <div class="project bta">
+                                     <a href="/knowledge"><br>
+                                            <h3><br> knowledge<br> Resume</h3>
+                                     </a>
+                                </div>
+                                
+                                <div class="project bta">
+                                    <a href="/calculate"><br>
+                                      <h3><br> Loan<br> Calculator</h3>
+                                    </a>
+                                </div>
+                          </div>
+                </div>
+
+   </section>
+   <!-- Page-2 -->
+   <section id="Page-2" class="page">
+        <h1>Back End</h1><br><br>
+            <div class="container">
+                
+                
+                <div id="back-end" class="main-circle">
+                    <div class="project bta">
+                        <a href="https://websitecotentful.netlify.app/create"><br>
+                            <h3><br> CRUD<br> Mongo Data Base</h3>
                         </a>
                     </div>
                     <div class="project bta">
-                        <a href="/frankfurt"><br>
-                            <h3><br> Frankfurt<br> Ledger</h3>
+                        <a href="https://websitecotentful.netlify.app/tocook"><br>
+                            <h3><br> CRUD <br> Postgres Data Base</h3>
                         </a>
                     </div>
                     <div class="project bta">
-                        <a href="/guess"><br>
-                            <h3><br> Number<br> Guesser</h3>
+                        <a href="https://websitecotentful.netlify.app/signup"><br>
+                            <h3><br> UX<br> Signup Form</h3>
                         </a>
                     </div>
                 </div>
-                <br><br>
-                <div>
-                    <div class="project bta">
-                        <!-- https://websitecotentful.netlify.app-->
-                        <a href="/hambuger"><br>
-                            <h3> <br> Hambuger<br><br> Menu</h3>
-                        </a>
-                    </div>
-                    <div class="project bta">
-                        <a href="/knowledge"><br>
-                            <h3><br> knowledge<br> Resume</h3>
-                        </a>
-                    </div>
-                    <div class="project bta">
-                        <a href="/calculate"><br>
-                            <h3><br> Loan<br> Calculator</h3>
-                        </a>
-                    </div>
-            
-                </div>
-                <br><br>
-                <h1>Back End</h1><br><br>
-            
-               <section id="back-end">
+                <div class="main-circle">
                     <div>
                         <div class="project bta">
-                            <a href="https://websitecotentful.netlify.app/create"><br>
-                                <h3><br> CRUD<br> Mongo Data Base</h3>
+                            <a href="./animal"><br>
+                                <h3><br> Backend <br> DevOp</h3>
                             </a>
                         </div>
                         <div class="project bta">
-                            <a href="https://websitecotentful.netlify.app/tocook"><br>
-                                <h3><br> CRUD <br> Postgres Data Base</h3>
-                            </a>
-                        </div>
-                        <div class="project bta">
-                            <a href="https://websitecotentful.netlify.app/signup"><br>
-                                <h3><br> UX<br> Signup Form</h3>
+                            <a href=" https://groupproject-minitwitter.netlify.app"><br>
+                                <h3><br>Mini<br> Twitter</h3>
                             </a>
                         </div>
                     </div>
-                    <div>
-                        <div>
-                            <div class="project bta">
-                                <a href="./animal"><br>
-                                    <h3><br> Backend <br> DevOp</h3>
-                                </a>
-                            </div>
-                            <div class="project bta">
-                                <a href=" https://groupproject-minitwitter.netlify.app"><br>
-                                    <h3><br>Mini<br> Twitter</h3>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-               </section>
-            </main>
+                </div><br><br>
+            </div>
+            <div>
+                <a href="#page-1" class="btn">
+                    <i class="fas fa-arrow-circle-up"></i>
+                </a>
+            </div>
+   </section>
+                
            <br><br>
        </div>
    </div>
@@ -122,6 +137,8 @@
         <p>Copyright &copy; 2021 - Chigozie Francis</p>
     </footer>
     <script src="./js/main.js"></script>
+
+    <script src="./js/ledger.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
