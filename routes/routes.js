@@ -440,9 +440,19 @@ router.get('/knowledge', function (req, res) {
       res.sendFile(path.join(__dirname, '/html/knowledge.html'))
 }); 
 
+// Other Satatic Designs
+router.get('/staticdesign', function (req, res) {
+      res.sendFile(path.join(__dirname, '/html/sdesign.html'))
+}); 
+
 //Presentation
 router.get('/presentation', function (req, res) {
       res.sendFile(path.join(__dirname, '/html/presentation.html'))
+}); 
+
+//Drop Down Menu
+router.get('/dropdown', function (req, res) {
+      res.sendFile(path.join(__dirname, '/html/dropdown.html'))
 }); 
 //404 PAGE
 router.get(/*default*/ (req, res) => {
