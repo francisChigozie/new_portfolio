@@ -298,6 +298,7 @@ margin-left: 170px;
 
     #page-2 .container {
       float: none;
+      left: 0;
      display: flex;
     flex-direction: column;
      align-items: center;
