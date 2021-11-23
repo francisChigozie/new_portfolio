@@ -296,7 +296,8 @@ margin-left: 170px;
 /* Mobile */
 @media(max-width: 600px) {
 
-    #container .row .page  {
+    #page-1 .page,
+    #page-2 .page {
       float: none;
       left: 0;
      display: flex;
@@ -304,7 +305,6 @@ margin-left: 170px;
      align-items: center;
      justify-content: center;
      text-align: center;
-     margin-left: 0px;
  }
 
  img {
