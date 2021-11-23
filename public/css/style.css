@@ -296,7 +296,7 @@ margin-left: 170px;
 /* Mobile */
 @media(max-width: 600px) {
 
-    #page-2 .container {
+    .page .container {
       float: none;
       left: 0;
      display: flex;
