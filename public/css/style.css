@@ -296,11 +296,11 @@ margin-left: 170px;
 /* Mobile */
 @media(max-width: 600px) {
 
-    .page .container {
+    main .row .page  {
       float: none;
       left: 0;
      display: flex;
-    flex-direction: column;
+     flex-direction: column;
      align-items: center;
      justify-content: center;
      text-align: center;
