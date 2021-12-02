@@ -298,76 +298,77 @@ margin-left: 170px;
 
     #page-1 .page,
     #page-2 .page {
-      float: none;
-      left: 0;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
- }
+        float: none;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
 
 @media(max-width: 600px) {
 
-    #page-1 .page,
-    #page-2 .page {
-      float: none;
-      left: 0;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
- }
+                #page-1 .page,
+                #page-2 .page {
+                float: none;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
 
- img {
-    float: none;
-    text-align: center;
-}
+            img {
+                float: none;
+                text-align: center;
+            }
 
-.navbar ul, .navbar ul li {
-    float: none;
-}
+            .navbar ul, .navbar ul li {
+                float: none;
+            }
 
-.navbar ul li a {
-    color: #fff;
-    background-color: #333;
-    border-radius: 5px;
-}
+            .navbar ul li a {
+                color: #fff;
+                background-color: #333;
+                border-radius: 5px;
+            }
 
- #about  {
-    
-    text-align: center;
-    margin: auto;
- }
+            #about  {
+                
+                text-align: center;
+                margin: auto;
+            }
 
- #resume .container-resume {
-     float: none;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
- }
+            #resume .container-resume {
+                float: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
 
- #resume .resume-main {
-    width: 100%;
- }
+            #resume .resume-main {
+                width: 100%;
+            }
 
- #contact-form {
-      float: none;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
-     max-width: 500px;
-     margin-left: 0px;
- }
+            #contact-form {
+                float: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                max-width: 500px;
+                margin-left: 0px;
+            }
 
- #feedback-form {
-max-width: 600px;
-margin-left: 60px;
-   }
+            #feedback-form {
+            max-width: 600px;
+            margin-left: 60px;
+            }
 
-}  
+    }  

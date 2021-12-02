@@ -7,6 +7,10 @@ var contactSchema = new Schema({
         type: String,
         required: [true, 'Please add a name']
     },
+     subject: {
+        type: String,
+        required: [true, 'Please the subject']
+    },
     email: {
         type: String,
         required: [true, 'Please add an email'],

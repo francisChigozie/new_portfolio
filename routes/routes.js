@@ -37,8 +37,10 @@ router.get('/contact', function (req, res) {
 //@access  Public
 
 router.post('/contact', asyncHandler(async(req, res, next) => {
-       //const {email} = req.body;
-        // sendmail(email)
+         //const {email} = req.body;
+          const {name, subject, email, text} =  req.body;
+        
+         sendmail(email, name, subject, text)
 
           const newContact = await Contact.create( req.body)
 
