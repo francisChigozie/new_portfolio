@@ -45,7 +45,8 @@ router.post('/contact', asyncHandler(async(req, res, next) => {
     newContact.save( (err) => {
         if (err) {
             res.type('html').status(500);
-            res.send('Error:', err);
+           // res.render('errors', err)
+           res.send('Error:', err);
         }else{
             res.render('created', {contact: newContact});
         }
@@ -373,7 +374,7 @@ router.get('/hotelcontact', async function(req, res) {
 
  router.post('/hotelcontact', (asyncHandler(async (req, res, next) => {
     const {email} = req.body;
-         //sendmail(email)
+           sendmail(email)
     try{
        const hotelcontact = await Hotelcontact.create(req.body)
 
@@ -393,7 +394,7 @@ router.get('/hotelcontact', async function(req, res) {
 //Frankfurt Ledger
 router.post('/frankfurtcontact', (asyncHandler(async (req, res, next) => {
     const {email} = req.body;
-         //sendmail(email)
+           sendmail(email)
     try{
        const frankfurtcontact = await Frankfurtcontact.create(req.body)
 

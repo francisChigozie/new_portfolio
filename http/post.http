@@ -1,0 +1,9 @@
+POST http://localhost:3000/contact
+Content-Type: application/json
+
+{
+    "name": "Holy",
+    "subject": "Praises",
+    "email": "jesus@heaven.org",
+    "text": "Come and lets praise the lord"
+}

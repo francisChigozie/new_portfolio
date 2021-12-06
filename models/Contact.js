@@ -3,25 +3,20 @@ var mongoose = require('mongoose')
 var Schema = mongoose.Schema;
 
 var contactSchema = new Schema({
-    name: {
+    user: {
         type: String,
-        required: [true, 'Please add a name']
     },
      subject: {
         type: String,
-        required: [true, 'Please the subject']
     },
     email: {
         type: String,
-        required: [true, 'Please add an email'],
-        unique: [true, 'This email already exist '],
-        match: [
-            /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please add a valid email'
-        ]
+    },
+     phone: {
+        type: String,
     },
     text: {
         type: String,
-    required: [true, 'Please add some text message']
     },
     created_at: {
         type: Date,
