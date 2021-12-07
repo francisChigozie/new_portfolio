@@ -12,6 +12,8 @@ form.addEventListener('submit',(e) => {
 
     checkInputs();
 
+    completeValidate();
+
 });
 
 function checkInputs() {
@@ -55,8 +57,48 @@ function checkInputs() {
 
     if(textValue === '') {
         setErrorFor(text, 'Please write your message');
-    }else{
-                    // send data message
+    }else{ // add success class
+         setSuccessFor(text)
+        } 
+}
+
+function setErrorFor(input, message) {
+    const formControl = input.parentElement; //form-control
+    const small = formControl.querySelector('small');
+
+    // add error message inside small
+    small.innerText = message;
+
+    // add error class
+    formControl.className = 'form-group error';
+}
+
+function setSuccessFor(input) {
+    const formControl = input.parentElement;
+    formControl.className = 'form-group success'
+}
+
+function isEmail(email){
+    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+}
+
+function completeValidate() {
+    // get the values from the inputs
+    const userValue = user.value.trim();
+    const subjectValue = subject.value.trim();
+    const emailValue = email.value.trim();
+    const phoneValue = phone.value.trim();
+    const textValue = text.value.trim();
+
+    if (userValue !== '' && subjectValue !== '' &&
+        emailValue !== '' && phoneValue !== '' && textValue !== '') {
+
+             sendFormData();
+        }
+}
+
+function sendFormData(){
+     // send data message
                     var data = new FormData(form)
 
                     fetch("/contact", {
@@ -79,36 +121,14 @@ function checkInputs() {
                     .then((data) => {
                         console.log(data)
                          
-                     var successMsg = document.getElementById('result').innerHTML += 
-                        'Thanks ! Your message is sent and I write you soon';
+                     var successMsg = document.getElementById('result').innerHTML = 
+                        'Your message is sent and I will write you soon';
 
                     setInterval(() => {
                         window.location = '/contact';
                     }, 20000)
                     })
-
-        } 
           
-}
-
-function setErrorFor(input, message) {
-    const formControl = input.parentElement; //form-control
-    const small = formControl.querySelector('small');
-
-    // add error message inside small
-    small.innerText = message;
-
-    // add error class
-    formControl.className = 'form-group error';
-}
-
-function setSuccessFor(input) {
-    const formControl = input.parentElement;
-    formControl.className = 'form-group success'
-}
-
-function isEmail(email){
-    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 }
 
 /**
