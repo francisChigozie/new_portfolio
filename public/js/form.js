@@ -97,11 +97,11 @@ function completeValidate() {
         }
 }
 
-function sendFormData(){
-     // send data message
+async function sendFormData(){
+                    // send data message
                     var data = new FormData(form)
 
-                    fetch("/contact", {
+                  await fetch("/contact", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -128,36 +128,42 @@ function sendFormData(){
                         window.location = '/contact';
                     }, 20000)
                     })
-          
+                    .catch((err) => {
+                        console.error(err.message)
+                    })
+     
 }
 
 /**
  *function getFormData() {
  
-    var data = new FormData(form)
+     // get the values from the inputs
+    const userValue = user.value.trim();
+    const subjectValue = subject.value.trim();
+    const emailValue = email.value.trim();
+    const phoneValue = phone.value.trim();
+    const textValue = text.value.trim();
 
-    fetch("/contact", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-     },
-     body: JSON.stringify({
-         user: data.get('name'),
-         subject: data.get('subject'),
-         email: data.get('email'),
-         phone: data.get('phone'),
-         text: data.get('text'),
-     })
- })
-    .then((response) => {
-           response.json()
-        console.log(response)
-    })
-    .then((data) => {
-        console.log(data)
-    })
+         try{
+          axios.post("/contact", {
+                    user: userValue,
+                    subject: subjectValue,
+                    email: emailValue,
+                    phone: phoneValue,
+                    text: textValue
+              }
+          )
+          .then((res) => {
+              console.log(res)
+          })
+          .then((data) => {
+              console.log(data)
+          })
+         }
+          catch(err) {
+             console.error(err.message)
+         }
 }
-
  * 
 function sendForm() {
     var formData = new formData(form);
@@ -186,4 +192,5 @@ function sendForm() {
   })
 
 }
+          
  */

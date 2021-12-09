@@ -25,7 +25,7 @@ const dotenv = require('dotenv')
         text: 'Write you soon',
         html: "<h3>Thank You and I Will write you soon:</h3><br>" +
               "</a><br><a href='https://github.com/francisChigozie'> Visit My Git/Hub</a><br><br>" +
-               "From the Management:<br>Francis Web & App  <br> Baden-Württenberg, Germany <br> Tel:+49 1713345532"
+               "From the Management:<br>Francis Web & App  <br> Europe"
          
     };
 
