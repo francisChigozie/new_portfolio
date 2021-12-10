@@ -359,6 +359,11 @@ color: lightgreen;
         justify-content: center;
         text-align: center;
     }
+
+     #resume .resume-img {
+                width: 100%;
+            }
+
 }
 
 @media(max-width: 600px) {
@@ -405,6 +410,10 @@ color: lightgreen;
             }
 
             #resume .resume-main {
+                width: 100%;
+            }
+
+            #resume .resume-img {
                 width: 100%;
             }
 
