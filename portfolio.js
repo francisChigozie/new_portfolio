@@ -38,6 +38,9 @@ app.set('view engine', 'ejs');
 app.use(cors({
     origin: "https://digitalexhibition.herokuapp.com/" //or your netlify domain https://digitalexhibition.herokuapp.com/
 }))
+app.use(cors({
+    origin: "https://www.chigoziefrancis-portfolio.dev/dist/"
+}))
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.static(__dirname + '/public'));
