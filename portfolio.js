@@ -27,9 +27,9 @@ const app = express()
 app.use(express.json())
 
 //Dev logging middleware
-if(process.env === 'production'){
-     app.use(morgan('dev'));
-}
+//if(process.env === 'production'){
+    // app.use(morgan('dev'));
+//}
 
 const PORT = process.env.PORT || 3001
 
