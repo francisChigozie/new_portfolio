@@ -36,9 +36,9 @@ router.get('/contact', function (req, res) {
 //@route  POST /api/v1/contact
 //@access  Public
 
-router.post('/contact', asyncHandler(async(req, res, next) => {
-         const {email} = req.body;
-         sendmail(email)
+router.post('/homePageContact', asyncHandler(async(req, res, next) => {
+         //const {email} = req.body;
+       //  sendmail(email)
 
           const newContact = await Contact.create( req.body)
 
@@ -188,13 +188,13 @@ router.get('/deutsch', function (req, res) {
 }); 
 
 //Form About Animals And form
-router.get('/animal', function (req, res) {
+router.get('/backdev', function (req, res) {
       res.sendFile(path.join(__dirname, '/html/list.html'))
 }); 
 
 //form.html
-router.get('/formAnimal', function (req, res) {
-      res.sendFile(path.join(__dirname, '/html/form.html'))
+router.get('/book', function (req, res) {
+      res.sendFile(path.join(__dirname, '/html/bookform.html'))
 }); 
 
 //book.html
@@ -442,7 +442,7 @@ router.get('/knowledge', function (req, res) {
 }); 
 
 // Other Satatic Designs
-router.get('/staticdesign', function (req, res) {
+router.get('/satdesign', function (req, res) {
       res.sendFile(path.join(__dirname, '/html/sdesign.html'))
 }); 
 
@@ -455,6 +455,28 @@ router.get('/presentation', function (req, res) {
 router.get('/dropdown', function (req, res) {
       res.sendFile(path.join(__dirname, '/html/dropdown.html'))
 }); 
+
+// OOPROG
+router.get('/ooprog', function (req, res) {
+    res.sendFile(path.join(__dirname, '/html/oop.html'))
+}); 
+
+// Object-Oriented-Programming 
+//JAVA
+router.get('/java', function (req, res) {
+    res.sendFile(path.join(__dirname, '/obj-ori-pro/java.html'))
+});
+
+//PYTHON
+router.get('/python', function (req, res) {
+    res.sendFile(path.join(__dirname, '/obj-ori-pro/python.html'))  
+});
+
+//NODE
+router.get('/node', function (req, res) {
+    res.sendFile(path.join(__dirname, '/obj-ori-pro/node.html'))    
+});
+
 
 //404 PAGE
 router.get(/*default*/ (req, res) => {

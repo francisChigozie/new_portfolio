@@ -43,6 +43,8 @@ function checkInputs() {
     if(emailValue === '') {
         setErrorFor(email, 'Please enter your email')
     }else if(!isEmail(emailValue)) {
+        //set the regex logic
+
         setErrorFor(email, 'Enter a valid email')
     }else{
         setSuccessFor(email);
@@ -79,7 +81,7 @@ function setSuccessFor(input) {
 }
 
 function isEmail(email){
-    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    return  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/ ;
 }
 
 function completeValidate() {
@@ -101,10 +103,10 @@ async function sendFormData(){
                     // send data message
                     var data = new FormData(form)
 
-                  await fetch("/contact", {
+                  await fetch("/homePageContact", {
                     method: "POST",
                     headers: {
-                        "Content-Type": "application/json"
+                        "Content-Type": "application/json", "Access-Control-Allow-Origin": "*"
                     },
                     body: JSON.stringify({
                         user: data.get('user'),
@@ -122,11 +124,13 @@ async function sendFormData(){
                         console.log(data)
                          
                      var successMsg = document.getElementById('result').innerHTML = 
-                        'Your message is sent and I will write you soon';
+                        'Your message is sent and I will write you soon.' + '' +
+                        'Please check your email for a feedback.';
 
                     setInterval(() => {
                         window.location = '/contact';
                     }, 20000)
+
                     })
                     .catch((err) => {
                         console.error(err.message)
